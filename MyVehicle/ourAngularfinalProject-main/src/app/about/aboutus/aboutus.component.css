@@ -1,0 +1,17 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.container {
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 7%;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-bottom: 4%;
+}

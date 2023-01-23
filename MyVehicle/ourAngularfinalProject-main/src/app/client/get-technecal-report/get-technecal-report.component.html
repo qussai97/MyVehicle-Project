@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/css/styledashboard.css">
+    <link href="/assets/css/stylelibs.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/chartist.css">
+    <link rel="stylesheet" href="/assets/css/morris.css">
+    <link rel="stylesheet" href="/assets/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/assets/css/c3.css">
+    <link rel="stylesheet" href="/assets/css/flag-icon.min.css">
+    <!-- <link rel="stylesheet" href="/assets/css/style.css">
+     <link rel="stylesheet" href="/assets/css/bootstrap-icons.css">  -->
+    <title> Admin Dashboard </title>
+</head>
+
+<body>
+
+    <!-- main wrapper -->
+    <!-- ============================================================== -->
+    <div class="dashboard-main-wrapper">
+        <!-- ============================================================== -->
+        <!-- navbar -->
+        <!-- ============================================================== -->
+        <div class="dashboard-header">
+            <nav class="navbar navbar-expand-lg bg-light fixed-top">
+                <!-- <a class="navbar-brand" href="index.html">Concept</a> -->
+                <div class="logo">
+                    <img src="assets/img/MyVehicle -logos.jpeg" width="100" height="80" style="padding:7px;margin-left: 50px; border-radius: 15px;" alt="Venue Logo">
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-right-top">
+                        <li class="nav-item">
+                            <div id="custom-search" class="top-search-bar">
+                                <input class="form-control" type="text" placeholder="Search..">
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown notification">
+                            <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell" style="margin-left: 15px;margin-right: 15px;"></i> <span class="indicator"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
+                                <li>
+                                    <div class="notification-title"> Notification</div>
+                                    <div class="notification-list">
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action active">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">John Abraham </span>is now following you
+                                                        <div class="notification-date">2 days ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-4.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is watching your main repository
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-5.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica Caruso</span>accepted your invitation to join the team.
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list-footer"> <a href="#">View all notifications</a></div>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item dropdown nav-user" style="margin-bottom: 15px;margin-left: 15px;margin-right: 15px;">
+                            <a class="nav-link nav-user-img" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{homeService.User_profile.userImage}}" alt="" class="user-avatar-md rounded-circle" (click)="showProfile()"></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                                <div class="nav-user-info">
+                                    <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>
+                                    <span class="status"></span><span class="ml-2">Available</span>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end navbar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- left sidebar -->
+        <!-- ============================================================== -->
+        <div class="nav-left-sidebar sidebar-dark">
+            <div class="menu-list">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                <a class="nav-link active" routerLink="/client/client"><i class="fa fa-dashboard"></i>my vehicle </a>
+
+                            </li>
+                            <li class="nav-item ">
+
+                                <a class="nav-link active" routerLink="/client/client"><i class="fa fa-fw fa-user-circle"></i>Dashboard </a>
+
+
+                                <li class="nav-item">
+
+                                    <a class="nav-link" (click)="DrivingLicense()"><i  class="fa fa-id-card-o" aria-hidden="true"></i>Driving License</a>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" (click)="TechnecalReportUser()"><i class="fa fa-file-pdf-o"></i>Technecal Report</a>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" (click)="showMessage()"><i class="fa fa-commenting" aria-hidden="true" ></i>Message </a>
+
+                                            <!-- <li class="nav-item">
+                                                <a class="nav-link" routerLink="/client/add-car-licence"><i class="fa fa-car" aria-hidden="true" ></i>New Car Licensing</a> -->
+                                            <li class="nav-item">
+
+                                                <a mat-button [matMenuTriggerFor]="menu" class="nav-link" style="float: left; padding-right:18rem;"><i class="fa fa-car" aria-hidden="true"></i>New  Car Licensing Center</a>
+                                                <mat-menu #menu="matMenu">
+                                                    <button mat-menu-item (click)="InsertCar()"><i class="fa fa-thumb-tack" aria-hidden="true"></i>Insert Car Information</button>
+                                                    <button mat-menu-item (click)="AddCard()"><i class="fa fa-th-list" aria-hidden="true"></i>Add Your Credit-Card</button>
+                                                    <button mat-menu-item (click)="GetBankcardByUserId()"><i class="fa fa-th-list" aria-hidden="true"></i>check your Credit-Card</button>
+
+                                                </mat-menu>
+
+                                                <li class="nav-item">
+
+                                                    <a class="nav-link"><i class="fa fa-sign-out" aria-hidden="true" (click)="logout()"></i>Logout</a>
+
+                                                </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end left sidebar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- wrapper  -->
+        <!-- ============================================================== -->
+        <div class="dashboard-wrapper">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="page-header">
+                                <h2 class="pageheader-title">User Dashboard </h2>
+                                <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
+                                <div class="page-breadcrumb">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- end pageheader  -->
+            <!-- ============================================================== -->
+
+
+
+
+            <div *ngFor="let user of homeService.reportuser">
+                <div style="padding-bottom: 7px;" id="pdfTable" #pdfTable>
+                    <div class="card" style="margin-left: 1em; position:relative;">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="text-center lh-1 mb-2">
+                                    <h3 class="fw-bold " style="margin:15px;">Technechal Report</h3> <span class="fw-normal"></span>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div>
+                                                    <h5 class="fw-bolder">EMP Code :39124</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div>
+                                                    <h5 class="fw-bolder">EMP Name:{{user.fullName}}</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div>
+                                                    <h5 class="fw-bolder">PF No.:101523065714</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div>
+                                                    <h5 class="fw-bolder">NOD:28</h5> <small class="ms-3"></small> </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div>
+                                                    <h5 class="fw-bolder">ESI No.:100</h5> <small class="ms-3"></small> </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div>
+
+                                        <table class="mt-4 table table-bordered " style="position:static;">
+                                            <thead class="bg-dark text-white">
+                                                <tr>
+                                                    <th style="color: #63b1ff;" scope="col">Lable</th>
+                                                    <th style="color: #63b1ff;" scope="col">value</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">Name</th>
+                                                    <td>{{user.fullName}}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">vehicleName</th>
+                                                    <td>{{user.vehicleName}}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">vehicleColor</th>
+                                                    <td>{{user.vehicleColor}}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">vehicleCategory</th>
+                                                    <td>{{user.vehicleCategory}}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">useType</th>
+                                                    <td>{{user.useType}}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">registerType</th>
+                                                    <td>{{user.registerType}}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">licenseNumber</th>
+                                                    <td>{{user.licenseNumber}}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">licenseExpiry</th>
+                                                    <td>{{user.licenseExpiry}}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">engineCapacity</th>
+                                                    <td>{{user.engineCapacity}}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">engineType</th>
+                                                    <td>{{user.engineType}}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">madeYear</th>
+                                                    <td>{{user.madeYear}}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">licensingCenter</th>
+                                                    <td>{{user.licensingCenter}}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">chassisNumber</th>
+                                                    <td>{{user.chassisNumber}}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">engineNumber</th>
+                                                    <td>{{user.engineNumber}}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">address</th>
+                                                    <td>{{user.address}}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">cost</th>
+                                                    <td>{{user.cost}}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">insuranceType</th>
+                                                    <td>{{user.insuranceType}}</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">insuranceValues</th>
+                                                    <td>{{user.insuranceValues}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Total value</th>
+                                                    <td>{{user.value}}</td>
+
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <button class=" colorbtn edit" style="margin-bottom: 7px;" (click)="downloadAsPDF(); ">Export To PDF</button>
+                <!-- <input type="file" (change)="fileChange($event)" placeholder="Upload file" accept=".pdf,.doc,.docx"> -->
+                <!-- <mat-label for="file">Upload File</mat-label>
+          <input formControlName="file" id="file"  type="file" class="form-control" (change)="onFileChange($event)">
+          <div *ngIf="f.file.touched && f.file.invalid" class="alert alert-danger">
+            <div *ngIf="f.file.errors && f.file.errors.required">Image is required.</div>
+          </div> -->
+                
+            </div>
+            
+        </div>
+
+
+        <!-- <button class="btn btn-primary " (click)="exportexcel(); ">Export To exl</button> -->
+    </div>
+
+    <!-- </div> -->
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <p class="edit">Copyright © {{currentYear}} Template by: <a>{{Name}}</a></p>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="text-md-right footer-links d-none d-sm-block">
+                        <a (click)="GoToHome()">Home</a>
+                        <a (click)="GoToAbout()">About</a>
+                        <a (click)="GoToContact()">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

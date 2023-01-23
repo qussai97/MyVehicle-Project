@@ -1,0 +1,54 @@
+<h2 mat-dialog-title>
+    Add Licensing</h2>
+
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="formGroup">
+        <mat-form-field class="example-full-width">
+
+            <mat-label>minValue</mat-label>
+            <input type="text" matInput formControlName="minValue" style="font-size:large;">
+            <mat-error *ngIf="formGroup.controls.minValue.hasError('required')">
+                minValue is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>maxValue</mat-label>
+            <input type="text" matInput formControlName="maxValue" style="font-size:large;">
+            <mat-error *ngIf="formGroup.controls.maxValue.hasError('required')">
+                maxValue is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+        <div></div>
+        
+
+        <mat-form-field class="example-full-width">
+            <mat-label>engineType</mat-label>
+            <input type="text" matInput formControlName="engineType" style="font-size:large;">
+            <mat-error *ngIf="formGroup.controls.engineType.hasError('required')">
+                engineType is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>numberPassengers</mat-label>
+            <input type="text" matInput formControlName="numberPassengers" style="font-size:large;">
+            <mat-error *ngIf="formGroup.controls.numberPassengers.hasError('required')">
+                numberPassengers is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+        <div></div>
+        <mat-form-field class="example-full-width">
+            <mat-label>cost</mat-label>
+            <input type="text" matInput formControlName="cost" style="font-size:large;">
+            <mat-error *ngIf="formGroup.controls.cost.hasError('required')">
+                cost is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button [disabled]="!formGroup.valid" mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="saveItem()">Save</button>
+</mat-dialog-actions>

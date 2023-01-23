@@ -1,0 +1,454 @@
+<!-- <div id="booking" class="section">
+    <img src="..\assets\img\kia2.jpg" style="width:100%;height: 100%; position:absolute;">
+    <div class="section-center">
+        <div class="container">
+            <div class="row">
+                <div class="booking-form" style="margin-top: -140px;">
+                    <h5 style="text-align: center; font-size: 40px; padding-bottom: 30px;color: white; font-family: cursive;">Registeration</h5>
+
+
+                    <form [formGroup]="formGroup" style="padding-left: 10px;">
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Name</mat-label>
+                                    <input type="text" matInput formControlName="fullName" style="font-size:large; ">
+                                    <mat-error *ngIf="formGroup.controls.fullName.hasError('required')">
+                                        Name is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Email</mat-label>
+                                    <input type="email" matInput formControlName="email" style="font-size: large; ">
+                                    
+                                    <mat-error *ngIf="formGroup.controls.email.hasError('email') && !formGroup.controls.emailControl.hasError('required')">
+                                        Please enter a valid email address
+                                    </mat-error>
+                                    <mat-error *ngIf="formGroup.controls.email.hasError('required')">
+                                        email is <strong>required</strong>
+                                    </mat-error>
+
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-md-6">
+
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Gender</mat-label>
+                                    <div class="dropdown">
+                                        <input matInput class="dropbtn" formControlName="gender" [(ngModel)]="genderName" style="font-size: large; ">
+                                        <div class="dropdown-content">
+                                            <a (click)="gender=true;genderName='Male'">Male</a>
+                                            <a (click)="gender=false;genderName='Female'">Female</a>
+                                        </div>
+                                    </div>
+                                    <mat-error *ngIf="formGroup.controls.gender.hasError('required')">
+                                        gender is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Age</mat-label>
+                                    <input type="number" matInput formControlName="age" style="font-size: large;  ">
+                                    <mat-error *ngIf="formGroup.controls.age.hasError('required')">
+                                        age is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>PhoneNumber</mat-label>
+                                    <input type="number" matInput formControlName="phoneNumber" style="font-size: large;  ">
+                                    <mat-error *ngIf="formGroup.controls.phoneNumber.hasError('required')">
+                                        phoneNumber is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Address</mat-label>
+
+                                    <input type="text" matInput formControlName="address" style="font-size: large; ">
+                                    <mat-error *ngIf="formGroup.controls.address.hasError('required')">
+                                        address is <strong>required</strong>
+                                    </mat-error>
+
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-md-6">
+
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>UserName</mat-label>
+                                    <input type="text" matInput formControlName="username" style="font-size:large; ">
+                                    <mat-error *ngIf="formGroup.controls.username.hasError('required')">
+                                        username is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Password</mat-label>
+                                    <input type="password" matInput formControlName="password" style="font-size:large;  ">
+                                    <mat-error *ngIf="formGroup.controls.password.hasError('required')">
+                                        password is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+
+                            </div>
+
+
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Confirm Password</mat-label>
+                            <input  type="password" (change)="onchang()" matInput formControlName="confirmPassword" style="font-size:large;  ">
+                        <mat-error *ngIf="formGroup.controls.confirmPassword.hasError('mismatch')"> Password is not match </mat-error>
+                        
+                        <mat-error  *ngIf="formGroup.controls.confirmPassword.hasError('required')">Confirm password  is required</mat-error>
+                       
+                       <mat-error *ngIf="formGroup.controls.confirmPassword.hasError('minlength') && !formGroup.controls.confirmPassword.hasError('required') && formGroup.controls.confirmPassword.value != formGroup.controls.password.value">password and confirm password does not   <strong>match</strong></mat-error> 
+                    </mat-form-field>
+
+                </div>
+                       
+                        
+                        <div class="col-md-5">
+                           
+                                <mat-label>Upload Image</mat-label> 
+        <input formControlName="file"  accept="image/*" type="file" class="form-control" (change)="onFileChange($event)">
+        <div *ngIf="f.file.touched && f.file.invalid" class="alert alert-danger">
+          <div *ngIf="f.file.errors && f.file.errors.required">Image is required.</div>
+        </div>
+                           
+                            </div>
+                        </div>
+                    <br>
+                
+        
+                          
+                        
+                        <div class="form-btn">
+                            <button id="submitForm" type="submit" class="submit-btn" (click)="saveregister()">Register</button>
+                        </div>
+
+                        <br><br>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-btn">
+                                    <button id="submitForm" type="submit" class="submit-btn" routerLink="/security/login">Login</button>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-btn">
+                                    <button id="submitForm" type="submit" class="submit-btn " routerLink="">Home</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div> -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Form-v8 by Colorlib</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <meta name="robots" content="noindex, follow">
+
+</head>
+
+<body class="form-v8">
+    <div class="page-content">
+        <div class="form-v8-content">
+            <div class="left">
+                <div class="overlay">
+                    <h2 style="padding-top:40px ; padding-bottom:20px ; font-size:5em;">MyVhichle</h2>
+
+                </div>
+            </div>
+            <div class="form-right" style="margin-left:auto;
+            margin-right:0;">
+
+                <div class="tab">
+                    <div class="tab-inner">
+                        <button class="tablinks" id="defaultOpen">Sign Up</button>
+                    </div>
+
+                </div>
+                <form class="form-detail" [formGroup]="formGroup">
+                    <!-- 
+                    <div class="tabcontent" id="sign-up">
+                        <div class="form-row">
+                            <label class="form-row-inner">
+                                <input type="text" matInput class="input-text" formControlName="usernameControl" style="font-size:large; ">
+                                <mat-error *ngIf="formGroup.controls.usernameControl.hasError('required')">
+                                    username is <strong>required</strong>
+                                </mat-error>
+    <span class="label">Username</span>
+    <span class="border"></span>
+    </label>
+                        </div>
+                        <div class="form-row">
+                            <label class="form-row-inner">
+                                <input type="text" matInput class="input-text" formControlName="emailControl" style="font-size: large; ">
+                                <mat-error *ngIf="formGroup.controls.emailControl.hasError('email') && !formGroup.controls.email.hasError('required')">
+                                    Please enter a valid email address
+                                </mat-error>
+    <span class="label">E-Mail</span>
+    <span class="border"></span>
+    </label>
+                        </div>
+                        <div class="form-row">
+                            <label class="form-row-inner">
+    <input type="password" name="password" id="password" class="input-text" required>
+    <span class="label">Password</span>
+    <span class="border"></span>
+    </label>
+                        </div>
+                        <div class="form-row">
+                            <label class="form-row-inner">
+    <input type="password" name="comfirm_password" id="comfirm_password" class="input-text" required>
+    <span class="label">Comfirm Password</span>
+    <span class="border"></span>
+    </label>
+                        </div>
+                        <div class="form-row-last">
+                            <input type="submit" name="register" class="register" value="Register">
+                        </div>
+                    </div> -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="example-full-width">
+                                <mat-label style="font-size: large; ">Name</mat-label>
+                                <input type="text" matInput formControlName="fullName" style="font-size:large; ">
+                                <mat-error style="color: rgb(255, 6, 6); font-size: 12px;" *ngIf="formGroup.controls.fullName.hasError('required')">
+                                    Name is <strong>required</strong>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field class="example-full-width">
+                                <mat-label style="font-size: large; ">Email</mat-label>
+                                <input type="email" matInput formControlName="email" style="font-size: large; ">
+                                
+                                <mat-error style="color: rgb(255, 6, 6); font-size: 12px;" *ngIf="formGroup.controls.email.hasError('email') && !formGroup.controls.email.hasError('required')">
+                                    Please enter a valid email address
+                                </mat-error>
+                                <mat-error style="color: rgb(255, 6, 6); font-size: 12px;" *ngIf="formGroup.controls.email.hasError('required')">
+                                    email is <strong>required</strong>
+                                </mat-error>
+
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <mat-form-field class="example-full-width">
+                                <mat-label style="font-size: large; ">Gender</mat-label>
+                                <div class="dropdown">
+                                    <input matInput class="dropbtn" formControlName="gender" [(ngModel)]="genderName" style="font-size: large; ">
+                                    <div class="dropdown-content">
+                                        <a (click)="gender=true;genderName='Male'">Male</a>
+                                        <a (click)="gender=false;genderName='Female'">Female</a>
+                                    </div>
+                                </div>
+                                <mat-error style="color: rgb(255, 6, 6); font-size: 12px;" *ngIf="formGroup.controls.gender.hasError('required')">
+                                    gender is <strong>required</strong>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field class="example-full-width">
+                                <mat-label style="font-size: large; ">Age</mat-label>
+                                <input type="number" matInput formControlName="age" style="font-size: large;  ">
+                                <mat-error style="color: rgb(255, 6, 6); font-size: 12px;" *ngIf="formGroup.controls.age.hasError('required')">
+                                    age is <strong>required</strong>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="example-full-width">
+                                <mat-label style="font-size: large; ">PhoneNumber</mat-label>
+                                <input type="number" matInput formControlName="phoneNumber" style="font-size: large;  ">
+                                <mat-error style="color: rgb(255, 6, 6); font-size: 12px;" *ngIf="formGroup.controls.phoneNumber.hasError('required')">
+                                    phoneNumber is <strong>required</strong>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field class="example-full-width">
+                                <mat-label style="font-size: large; ">Address</mat-label>
+
+                                <input type="text" matInput formControlName="address" style="font-size: large; ">
+                                <mat-error style="color: rgb(255, 6, 6); font-size: 12px;" *ngIf="formGroup.controls.address.hasError('required')">
+                                    address is <strong>required</strong>
+                                </mat-error>
+
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <mat-form-field class="example-full-width">
+                                <mat-label style="font-size: large; ">UserName</mat-label>
+                                <input type="text" matInput formControlName="username" style="font-size:large; ">
+                                <mat-error style="color: rgb(255, 6, 6); font-size: 12px;" *ngIf="formGroup.controls.username.hasError('required')">
+                                    username is <strong>required</strong>
+                                </mat-error>
+                            </mat-form-field>
+
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field class="example-full-width">
+                                <mat-label style="font-size: large; ">Password</mat-label>
+                                <input type="password" matInput formControlName="password" style="font-size:large;  ">
+                                <mat-error style="color: rgb(255, 6, 6); font-size: 12px;" *ngIf="formGroup.controls.password.hasError('required')">
+                                    password is <strong>required</strong>
+                                </mat-error>
+                                <mat-error style="color: rgb(255, 6, 6); font-size: 12px;"  *ngIf="formGroup.controls.password.hasError('minlength')">Password must be more than 10 char</mat-error>
+
+                            </mat-form-field>
+
+                        </div>
+
+
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="example-full-width">
+                                <mat-label style="font-size: large; ">Confirm Password</mat-label>
+                        <input  type="password" (change)="onchang()" matInput formControlName="confirmPassword" style="font-size:large;  ">
+                    <mat-error style="color: rgb(255, 6, 6); font-size: 12px;" *ngIf="formGroup.controls.confirmPassword.hasError('mismatch')"> Password is not match </mat-error>
+                    
+                    <mat-error style="color: rgb(255, 6, 6); font-size: 12px;"  *ngIf="formGroup.controls.confirmPassword.hasError('required')">Confirm password  is required</mat-error>
+                   
+                   <mat-error style="color: rgb(255, 6, 6); font-size: 12px;" *ngIf="formGroup.controls.confirmPassword.hasError('minlength') && !formGroup.controls.confirmPassword.hasError('required') && formGroup.controls.confirmPassword.value != formGroup.controls.password.value">password and confirm password does not   <strong>match</strong></mat-error> 
+                </mat-form-field>
+
+            </div>
+                   
+            <div class="col-md-6">
+                    <div  class="form-detail" [formGroup]="myForm">
+                        
+                            <mat-label style="font-size: large;color: rgba(0, 0, 0, 0.603); ">UploadImage</mat-label> 
+    <input formControlName="file"  accept="image/*" type="file" class="form-control" (change)="onFileChange($event)">
+    <mat-error style="color: rgb(255, 6, 6); font-size: 12px;" *ngIf="f.file.touched && f.file.invalid" class="alert alert-danger">
+      <mat-error style="color: rgb(255, 6, 6); font-size: 12px;" *ngIf="f.file.errors && f.file.errors.required">Image is required.</mat-error>
+    </mat-error>
+                      
+                        </div>
+            </div>
+                    </div>
+                <br>
+    
+                    <br><br>
+                    <!-- <div class="row">
+                        <div class="col-md-6">
+
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-btn">
+                                <button id="submitForm" type="submit" class="box-form right button" (click)="saveregister()">Register</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-btn">
+                                <button id="submitForm" type="submit" class="submit-btn" routerLink="/security/login">Login</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-btn">
+                                <button id="submitForm" type="submit" class="submit-btn " routerLink="">Home</button>
+                            </div>
+                        </div> 
+            </div>-->
+                    <div class="row">
+                        <div class="col-md-6" style="
+                float: right;
+                ">
+                            <div class="form-btn">
+                                <button style="float: left;" id="submitForm" type="submit" class="submit-btn new-button" (click)="saveregister()">Register</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-btn">
+                                <button style="float: left;" id="submitForm" type="submit" class="submit-btn new-button " routerLink="">Home</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" style="
+                        margin-top: 20px;
+                float: right;
+                ">
+                            <!-- <div class="form-btn">
+                                <button id="submitForm" type="submit" class="submit-btn" (click)="saveregister()">Register</button>
+                            </div> -->
+                            <p class="loginhere">
+                                Have already an account ?
+                                <a href="#" class="loginhere-link" style="color:#2ed7dd" routerLink="/security/login" id="submitForm " type="submit ">Login here</a>
+                            </p>
+                        </div>
+
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

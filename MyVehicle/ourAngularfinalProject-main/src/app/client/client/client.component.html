@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/css/styledashboard.css">
+    <link href="/assets/css/stylelibs.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/chartist.css">
+    <link rel="stylesheet" href="/assets/css/morris.css">
+    <link rel="stylesheet" href="/assets/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/assets/css/c3.css">
+    <link rel="stylesheet" href="/assets/css/flag-icon.min.css">
+    <!-- <link rel="stylesheet" href="/assets/css/style.css">
+     <link rel="stylesheet" href="/assets/css/bootstrap-icons.css">  -->
+    <title> Admin Dashboard </title>
+</head>
+
+<body>
+
+    <!-- main wrapper -->
+    <!-- ============================================================== -->
+    <div class="dashboard-main-wrapper">
+        <!-- ============================================================== -->
+        <!-- navbar -->
+        <!-- ============================================================== -->
+        <div class="dashboard-header">
+            <nav class="navbar navbar-expand-lg bg-light fixed-top">
+                <!-- <a class="navbar-brand" href="index.html">Concept</a> -->
+                <div class="logo">
+                    <img src="assets/img/MyVehicle -logos.jpeg" width="100" height="80" style="padding:7px;margin-left: 50px; border-radius: 15px;" alt="Venue Logo">
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-right-top">
+                        <li class="nav-item">
+                            <div id="custom-search" class="top-search-bar">
+                                <input class="form-control" type="text" placeholder="Search..">
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown notification">
+                            <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell" style="margin-left: 15px;margin-right: 15px;"></i> <span class="indicator"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
+                                <li>
+                                    <div class="notification-title"> Notification</div>
+                                    <div class="notification-list">
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action active">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">John Abraham </span>is now following you
+                                                        <div class="notification-date">2 days ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-4.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is watching your main repository
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-5.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica Caruso</span>accepted your invitation to join the team.
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list-footer"> <a href="#">View all notifications</a></div>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item dropdown nav-user" style="margin-bottom: 15px;margin-left: 15px;margin-right: 15px;">
+                            <a class="nav-link nav-user-img" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{homeService.User_profile.userImage}}" alt="" class="user-avatar-md rounded-circle" (click)="showProfile()"></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                                <div class="nav-user-info">
+                                    <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>
+                                    <span class="status"></span><span class="ml-2">Available</span>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end navbar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- left sidebar -->
+        <!-- ============================================================== -->
+        <div class="nav-left-sidebar sidebar-dark">
+            <div class="menu-list">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <!--                     
+                    <a class="d-xl-none d-lg-none" (click)="Dashboard()">Dashboard</a> -->
+                    <!-- <a class="d-xl-none d-lg-none" (click)="Dashboard()">Dashboard</a> -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                <a class="nav-link active" routerLink="/client/client"><i class="fa fa-dashboard"></i>my vehicle </a>
+
+                            </li>
+                            <li class="nav-item ">
+
+                                <a class="nav-link active" routerLink="/client/client"><i class="fa fa-fw fa-user-circle"></i>Dashboard </a>
+
+
+                                <li class="nav-item">
+
+                                    <a class="nav-link" (click)="DrivingLicense()"><i  class="fa fa-id-card-o" aria-hidden="true"></i>Driving License</a>
+
+                                    <li class="nav-item ">
+                                        <a class="nav-link" (click)="TechnecalReportUser()"><i class="fa fa-file-pdf-o"></i>Technecal Report</a>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" (click)="showMessage()"><i class="fa fa-commenting" aria-hidden="true" ></i>Message </a>
+
+                                            <!-- <li class="nav-item">
+                                                <a class="nav-link" routerLink="/client/add-car-licence"><i class="fa fa-car" aria-hidden="true" ></i>New Car Licensing</a> -->
+                                            <li class="nav-item">
+
+                                                <a mat-button [matMenuTriggerFor]="menu" class="nav-link" style="float: left; padding-right:18rem;"><i class="fa fa-car" aria-hidden="true"></i> New Car Licensing Center</a>
+                                                <mat-menu #menu="matMenu">
+                                                    <button mat-menu-item (click)="InsertCar()"><i class="fa fa-thumb-tack" aria-hidden="true"></i>Insert Car Information</button>
+                                                    <button mat-menu-item (click)="AddCard()"><i class="fa fa-th-list" aria-hidden="true"></i>Add Your Credit-Card</button>
+                                                    <button mat-menu-item (click)="GetBankcardByUserId()"><i class="fa fa-th-list" aria-hidden="true"></i>check your Credit-Card</button>
+
+                                                </mat-menu>
+
+                                                <li class="nav-item">
+
+                                                    <a class="nav-link"><i class="fa fa-sign-out" aria-hidden="true" (click)="logout()"></i>Logout</a>
+
+                                                </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end left sidebar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- wrapper  -->
+        <!-- ============================================================== -->
+        <div class="dashboard-wrapper">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="page-header">
+                                <h2 class="pageheader-title">User Dashboard </h2>
+                                <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
+                                <div class="page-breadcrumb">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <!-- <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                                            
+                                        <li class="breadcrumb-item active" aria-current="page">E-Commerce Dashboard Template</li>
+                                         -->
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <form [formGroup]="formGroup">
+                        <input type="number" matInput formControlName="engineCapasty" style="font-size:large;margin-left: 14px" placeholder=" Enter Engine Capasty">
+                        <button (click)="GetData()" style="margin-right: 15px;margin-left: 10px;font-size:large;color: #0e0c28;">Search</button>
+                    </form> -->
+
+
+                    <br><br>
+                    <!-- ============================================================== -->
+                    <!-- end pageheader  -->
+                    <!-- ============================================================== -->
+
+                    <div class="container">
+                        <div class="row">
+
+
+
+                            <div class="col-lg-3 col-sm-6" style="margin-left: 25px;">
+                                <div class="card-box bg-blue">
+                                    <div class="inner">
+                                        <h3>{{homeService.countcars[0].count_User_Cars}} </h3>
+                                        <p>Number Of Cars</p>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="fa fa-car" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!-- 
+                    <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
+                        <div class="card">
+                            <h5 class="card-header">All vehicle</h5>
+
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class="bg-light">
+                                        <tr class="border-0">
+
+                                            <th class="border-0">VehicleName</th>
+                                            <th class="border-0">VehicleModel </th>
+                                            <th class="border-0">VehicleColor</th>
+                                            <th class="border-0">VehicleCategory</th>
+                                            <th class="border-0">UseType</th>
+                                            <th class="border-0">RegisterType</th>
+                                            <th class="border-0">LicenseNumber</th>
+                                            <th class="border-0">LicenseExpiry</th>
+                                            <th class="border-0">EngineCapacity</th>
+                                            <th class="border-0">EngineType </th>
+                                            <th class="border-0">MadeYear</th>
+                                            <th class="border-0">LicensingCenter</th>
+                                            <th class="border-0">ChassisNumber</th>
+                                            <th class="border-0">EngineNumber</th>
+                                            <th class="border-0">Address</th>
+
+
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let user of homeService.usercar">
+
+
+                                            <td>{{user.vehicleName}} </td>
+                                            <td>{{user.vehicleModel}} </td>
+                                            <td>{{user.vehicleColor}}</td>
+                                            <td>{{user.vehicleCategory}}</td>
+                                            <td>{{user.useType}}</td>
+                                            <td>{{user.registerType}} </td>
+                                            <td>{{user.licenseNumber}} </td>
+                                            <td>{{user.licenseExpiry}}</td>
+                                            <td>{{user.engineCapacity}} </td>
+                                            <td>{{user.engineType}} </td>
+                                            <td>{{user.madeYear}} </td>
+                                            <td>{{user.licensingCenter}}</td>
+                                            <td>{{user.chassisNumber}} </td>
+                                            <td>{{user.engineNumber}} </td>
+                                            <td>{{user.address}} </td>
+
+
+
+
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+            <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
+                <!-- <div class="card">
+                    <h5 class="card-header">All vehicle</h5>
+
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class="bg-light">
+                                <tr class="border-0">
+
+                                    <th>insuranceType</th>
+                                    <th>insuranceValues </th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let Insurance of homeService.Insurance">
+
+
+                                    <td>{{Insurance.insuranceType}} </td>
+                                    <td>{{Insurance.insuranceValues}} </td>
+
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div> -->
+                <div style="position: right;">
+                    <div class=" card ">
+                        <h5 class="card-header ">All Insurance Type </h5>
+
+                        <div class="table-responsive ">
+                            <table class="table ">
+                                <thead class="bg-light ">
+                                    <tr class="border-0 ">
+
+                                        <th>insuranceType</th>
+                                        <th>insuranceValues </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let Insurance of homeService.Insurance ">
+
+
+                                        <td>{{Insurance.insuranceType}} </td>
+                                        <td>{{Insurance.insuranceValues}} </td>
+
+
+
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card ">
+                        <h5 class="card-header ">All Licens Type</h5>
+
+                        <div class="table-responsive ">
+                            <table class="table ">
+                                <thead class="bg-light ">
+                                    <tr class="border-0 ">
+
+                                        <th>Engine Capacity CC (MIN)</th>
+                                        <th>Engine Capacity CC (MAX)</th>
+                                        <th>Engine Type</th>
+                                        <th>Fees in JD</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let Licens of homeService.License ">
+                                        <td>{{Licens.minValue}}</td>
+                                        <td>{{Licens.maxValue}}</td>
+                                        <td>{{ Licens.engineType }}</td>
+
+
+                                        <td>{{Licens.cost}} JD</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12 " style="position: left;">
+
+            </div>
+
+
+            <!-- <table id="customers ">
+                <thead>
+                    <tr>
+                        <th>Engine Capacity CC (MIN)</th>
+                        <th>Engine Capacity CC (MAX)</th>
+                        <th>Engine Type</th>
+                        <th>Fees in JD</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let Licens of homeService.License ">
+                        <td>{{Licens.minValue}}</td>
+                        <td>{{Licens.maxValue}}</td>
+                        <td>{{ Licens.engineType }}</td>
+
+
+                        <td>{{Licens.cost}} JD</td>
+                    </tr>
+                </tbody>
+            </table>
+
+             <h1 style="text-align: center; "><b>Cost of Insurance</b></h1> 
+
+            <div>
+                <table id="customers ">
+                    <tr>
+                        <th>Insurance Type</th>
+                        <th>Fees in JD</th>
+                    </tr>
+                    <tr *ngFor="let Insurance of homeService.Insurance ">
+                        <td>{{Insurance.insuranceType}}</td>
+
+                        <td>{{Insurance.insuranceValues}}</td>
+                    </tr>
+
+                </table>
+            </div> -->
+            <form [formGroup]="formGroup" style="margin-left: 25px;">
+                <input type="number" matInput formControlName="engineCapasty" style="font-size:large;margin-left: 14px; border-radius: 5px;" placeholder=" Enter Engine Capasty">
+                <button (click)="GetData()" class="colorbtn ">Search</button>
+            </form>
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-lg-3 col-sm-6 " style="margin-left: 25px; ">
+                        <div class="card-box bg-blue ">
+                            <div class="inner ">
+                                <h3> {{homeService.engine_capasty.cost}} </h3>
+                                <p> Cost </p>
+                            </div>
+                            <div class="icon ">
+                                <i class="fa fa-money " aria-hidden="true "></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer -->
+            <!-- ============================================================== -->
+        </div>
+        <div class="footer ">
+            <div class="container-fluid ">
+                <div class="row ">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
+                        <p class="edit ">Copyright © {{currentYear}} Template by: <a>{{Name}}</a></p>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
+                        <div class="text-md-right footer-links d-none d-sm-block ">
+                            <a (click)="GoToHome() ">Home</a>
+                            <a (click)="GoToAbout() ">About</a>
+                            <a (click)="GoToContact() ">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>

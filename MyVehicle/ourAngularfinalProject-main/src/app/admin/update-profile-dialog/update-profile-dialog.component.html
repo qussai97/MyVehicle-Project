@@ -1,0 +1,76 @@
+
+<h2 mat-dialog-title>Update Profile</h2>
+<mat-dialog-content class="mat-typography" >
+    <form [formGroup]="formGroup" >
+        
+        
+       
+        <mat-form-field class="mat-form-field ng-tns-c13-12 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-hide-placeholder ng-pristine ng-valid mat-form-field-should-float ng-touched">
+            <div class="mat-form-field-wrapper">
+                <div class="mat-form-field-flex">
+                    <!----><!---->
+                    <div class="mat-form-field-infix">
+                        <input  class="form-control mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" type="text" matInput formControlName="fullName" [placeholder]="home.admin_profile.fullName" [value]="home.admin_profile.fullName" style="font-size:large;" >
+                    </div>
+       </div>
+            </div>
+        </mat-form-field>
+       
+       
+    
+            
+            <mat-form-field class="example-full-width">
+                <mat-label>Gender</mat-label>
+                <input  matInput formControlName="gender" style="font-size: large;" >
+                
+                
+ 
+                    
+                
+                    
+                    
+                  
+                <mat-error *ngIf="formGroup.controls.gender.hasError('required')">
+
+                    gender is <strong>required</strong>
+                </mat-error>
+                </mat-form-field>
+                
+                <div></div>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Age</mat-label>
+                        <input  matInput formControlName="age" style="font-size: large;">
+                        
+                        </mat-form-field>
+
+                        
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Email</mat-label>
+                                <input type="text" matInput formControlName="email" style="font-size: large;">
+                                <mat-error
+                               *ngIf="formGroup.controls.email.hasError('email') && !formGroup.controls.email.hasError('required')">
+                                Please enter a valid email address
+                               </mat-error>
+                               
+
+                                </mat-form-field>
+                               
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Address</mat-label>
+                                    <input type="text" matInput formControlName="address" style="font-size: large;">
+                                    
+                                    </mat-form-field>
+                                    <div></div>
+                                    <mat-form-field class="example-full-width">
+                                        <mat-label>PhoneNumber</mat-label>
+                                        <input type="number" matInput formControlName="phoneNumber" style="font-size: large;">
+                                        
+                                        </mat-form-field>
+                                        
+                                       
+                        </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button  mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="saveItem()">Save</button>
+</mat-dialog-actions>

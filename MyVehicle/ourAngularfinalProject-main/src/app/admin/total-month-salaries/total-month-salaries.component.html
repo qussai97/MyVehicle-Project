@@ -1,0 +1,25 @@
+<form [formGroup]="formGroup">
+    <input type="datetime-local" matInput formControlName="StartDate" tyle="font-size: large;margin-left: 14px;border-radius: 7px;color: #0023a3;width: 20rem;" placeholder="Enter Month">
+    <button (click)="GetData()" style="margin-right: 15px;margin-left: 10px;font-size:large;color: #0e0c28;">Search</button>
+</form>
+
+
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-sm-6">
+            <div class="card-box bg-blue">
+                <div class="inner">
+                    <h3> {{homeService.total_month_salaries[0].total_Salaries}} </h3>
+                    <p> Total Salaries </p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-money" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>

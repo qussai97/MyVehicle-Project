@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/css/styledashboard.css">
+    <link href="/assets/css/stylelibs.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/chartist.css">
+    <link rel="stylesheet" href="/assets/css/morris.css">
+    <link rel="stylesheet" href="/assets/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/assets/css/c3.css">
+    <link rel="stylesheet" href="/assets/css/flag-icon.min.css">
+    
+    <title> Admin Dashboard </title>
+</head>
+
+<body>
+
+    <!-- main wrapper -->
+    <!-- ============================================================== -->
+    <div class="dashboard-main-wrapper">
+        <!-- ============================================================== -->
+        <!-- navbar -->
+        <!-- ============================================================== -->
+        <div class="dashboard-header">
+            <nav class="navbar navbar-expand-lg bg-light fixed-top">
+                <!-- <a class="navbar-brand" href="index.html">Concept</a> -->
+                <div class="logo">
+                    <img src="assets/img/MyVehicle -logos.jpeg" width="100" height="80" style="padding:7px;margin-left: 50px; border-radius: 15px;" alt="Venue Logo">
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-right-top">
+                        <li class="nav-item">
+                            <div id="custom-search" class="top-search-bar">
+                                <input class="form-control" type="text" placeholder="Search..">
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown notification">
+                            <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell" style="margin-left: 15px;margin-right: 15px;"></i> <span class="indicator"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
+                                <li>
+                                    <div class="notification-title"> Notification</div>
+                                    <div class="notification-list">
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action active">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">John Abraham </span>is now following you
+                                                        <div class="notification-date">2 days ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-4.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is watching your main repository
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-5.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica Caruso</span>accepted your invitation to join the team.
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list-footer"> <a href="#">View all notifications</a></div>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item dropdown nav-user" style="margin-bottom: 15px;margin-left: 15px;margin-right: 15px;">
+                            <a class="nav-link nav-user-img" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/img/admin.jpg" alt="" class="user-avatar-md rounded-circle" (click)="showProfile()"></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                                <div class="nav-user-info">
+                                    <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>
+                                    <span class="status"></span><span class="ml-2">Available</span>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end navbar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- left sidebar -->
+        <!-- ============================================================== -->
+        <div class="nav-left-sidebar sidebar-dark">
+            <div class="menu-list">
+                <nav class="navbar navbar-expand-lg navbar-light">
+
+
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                <a class="nav-link active" routerLink="/admin/admin"><i class="fa fa-dashboard"></i>my vehicle </a>
+
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link active" routerLink="/admin/admin"><i class="fa fa-fw fa-user-circle"></i>Dashboard </a>
+
+                                <li class="nav-item">
+
+                                    <a mat-button [matMenuTriggerFor]="menu" class="nav-link" style="float: left; padding-right:18rem;"><i class="icon fa fa-wrench fa-fw " aria-hidden="true"></i>preferences</a>
+                                    <mat-menu #menu="matMenu">
+                                        <button mat-menu-item (click)="createEmployee()"><i class="fa fa-user-plus" aria-hidden="true"></i>Create Employee</button>
+                                        <button mat-menu-item (click)="InsertTaskJob()"><i class="fa fa-thumb-tack" aria-hidden="true"></i>Add TaskJoB</button>
+                                        <button mat-menu-item (click)="InsertLicensing()"><i class="fa fa-th-list" aria-hidden="true"></i>Add Licensing</button>
+                                        <button mat-menu-item (click)="createInsurance()"><i class="fa fa-th-list" aria-hidden="true"></i>Add Insurance</button>
+                                        <button mat-menu-item (click)="GoTosearchvehiclecategory()"><i class="fa fa-search" aria-hidden="true"></i>searching vehiclecategory </button>
+                                        <button mat-menu-item (click)="GoTosearchlicenseexpiry()"><i class="fa fa-clock-o" aria-hidden="true"></i>searching licenseexpiry </button>
+
+                                    </mat-menu>
+                                    
+                                    <li class="nav-item ">
+                                        <a class="nav-link" routerLink="/admin/report"><i class="fa fa-file-pdf-o"></i>static Reports</a>
+
+                                        <li class="nav-item ">
+                                            <a class="nav-link" routerLink="/admin/vehicle-system-report-between"><i class="fa fa-file-pdf-o"></i>searching Reports</a>
+
+                                            <li class="nav-item">
+                                                <a class="nav-link" routerLink="/admin/financial-report"><i class="fa fa-file-o" ></i>Financial Reports</a>
+
+                                                
+
+                                                <li class="nav-item">
+                                                    <a class="nav-link" routerLink="/admin/get-attendance"><i class="fa fa-pencil-square-o" aria-hidden="true" ></i>Get All Attendance </a>
+
+                                                    <li class="nav-item">
+
+                                                        <a class="nav-link"><i class="fa fa-sign-out" aria-hidden="true" (click)="logout()"></i>Logout</a>
+
+                                                    </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end left sidebar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- wrapper  -->
+        <!-- ============================================================== -->
+        <div class="dashboard-wrapper">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="page-header">
+                                <h2 class="pageheader-title">Admin Dashboard </h2>
+                                <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
+                                <div class="page-breadcrumb">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end pageheader  -->
+                    <!-- ============================================================== -->
+
+
+                    
+                    <form [formGroup]="formGroup">
+                        <div class="container">
+                            <div class="row gutters">
+                                <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <div class="account-settings">
+                                                <div class="user-profile">
+                                                    <div class="user-avatar" style="padding-top: 25px;">
+                                                        <img src="assets/img/admin.jpg" alt="Maxwell Admin">
+                                                    </div>
+                                                    <h5 class="user-name" style="padding-top: 30px;">{{home.admin_profile.fullName}}</h5>
+                                                    <h6 class="user-email">{{home.admin_profile.email}}</h6>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <div class="row gutters">
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                                    <h6 class="mb-2 text-primary">Personal Details</h6>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                                    <div class="form-group">
+                                                        <label for="fullName">Full Name</label>
+                                                        <input type="text" class="form-control" id="fullName" formControlName="fullName" value="{{home.admin_profile.fullName}}" placeholder="{{home.admin_profile.fullName}}">
+                                                    </div>
+                                                </div>
+
+                                                <div class=" col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 ">
+                                                    <div class="form-group ">
+                                                        <label for="phone ">Phone</label>
+                                                        <input type="text " class="form-control " id="phone " formControlName="phoneNumber" value="{{home.admin_profile.phoneNumber}}" placeholder="{{home.admin_profile.phoneNumber}}">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 ">
+                                                    <div class="form-group">
+                                                        <label for="website ">Age</label>
+                                                        <input type="url " class="form-control " id="website " formControlName="age" value="{{home.admin_profile.age}}" placeholder="{{home.admin_profile.age}}">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                                    <div class="form-group">
+                                                        <label for="eMail">Email</label>
+                                                        <input type="email" class="form-control" id="eMail" formControlName="email" value="{{home.admin_profile.email}}" placeholder="{{home.admin_profile.email}}">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row gutters ">
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                                                    <h6 class="mt-3 mb-2 text-primary ">Address</h6>
+                                                </div>
+
+                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 ">
+                                                    <div class="form-group ">
+                                                        <label for="Street ">Address</label>
+                                                        <input type="name " class="form-control " id="Street " value="{{home.admin_profile.address}}" formControlName="address" placeholder="{{home.admin_profile.address}}">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 ">
+                                                    <div class="form-group ">
+                                                        <label for="zIp ">Zip Code</label>
+                                                        <input type="text " class="form-control " id="zIp " value="+962" placeholder="Zip Code ">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row gutters ">
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                                                    <div class="text-right ">
+                                                        <button type="button " id="submit " name="submit " (click)="saveItem()" class="btn colorbtn">Update</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+
+        </div>
+        <div class="footer ">
+            <div class="container-fluid ">
+                <div class="row ">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
+                        <p class="edit ">Copyright © {{currentYear}} Template by: <a>{{Name}}</a></p>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 ">
+                        <div class="text-md-right footer-links d-none d-sm-block ">
+                            <a (click)="GoToHome() ">Home</a>
+                            <a (click)="GoToAbout() ">About</a>
+                            <a (click)="GoToContact() ">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>

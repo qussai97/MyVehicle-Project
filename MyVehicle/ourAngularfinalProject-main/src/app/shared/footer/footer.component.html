@@ -1,0 +1,62 @@
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="about-veno">
+                    <div class="logo">
+                        <img src="assets/img/MyVehicle -logos.jpeg" width="112" height="112" style="padding:10px; border-radius: 40px;" alt="Venue Logo">
+
+                        <p>This project was created to reduce the hassle and hardship on car owners in the car licensing process </p>
+                    </div>
+                    <ul class="social-icons">
+                        <li>
+                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                            <a href="https://www.facebook.com/"><i class="fa fa-facebook" ></i></a>
+                            <a href="https://twitter.com/i/flow/login"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/login/ar "><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="useful-links">
+                    <div class="footer-heading">
+                        <h4>Useful Links</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+
+                                <li><a (click)="GoToHome()"><i class="fa fa-stop"></i>Home</a></li>
+                                <li><a (click)="GoToAbout()"><i class="fa fa-stop"></i>About</a></li>
+                                <li><a (click)=" GoToContact()"><i class="fa fa-stop"></i>Contact Us</a></li>
+
+
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="contact-info">
+                    <div class="footer-heading">
+                        <h4>Contact Information</h4>
+                    </div>
+
+                    <ul>
+                        <li><span>Phone1:</span><a href="#">{{webPhone1}}</a></li>
+                        <li><span>Phone2:</span><a href="#">{{webPhone2}}</a></li>
+                        <li><span>Email:</span><a href="#">{{webemail}}</a></li>
+                        <li><span>Address:</span><i class="fa fa-map-marker"></i> {{webAddress}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="sub-footer">
+    <p>Copyright © {{currentYear}} Template by: <a>{{Name}}</a></p>
+</div>

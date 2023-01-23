@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~bootstrap/dist/css/bootstrap.css';
+@import '~bootstrap/dist/css/bootstrap-theme.min.css';
+@import '~bootstrap/dist/css/bootstrap-theme.css';
+@import '~bootstrap/dist/css/datepicker.css';
+@import '~bootstrap/dist/css/fontAwesome.css';
+@import '~bootstrap/dist/css/hero-slider.css';
+@import '~bootstrap/dist/css/style.css';
+
+/* @import '~bootstrap/dist/css/owl-carousel.css';  */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.dashboard-wrapper {
+    background-color: rgb(202, 226, 235);
+    padding-bottom: 30px;
+}

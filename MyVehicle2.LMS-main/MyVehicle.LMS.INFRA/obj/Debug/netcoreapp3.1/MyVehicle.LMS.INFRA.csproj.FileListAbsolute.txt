@@ -1,0 +1,13 @@
+C:\Users\Qusai.Aldughaim\Desktop\MyVehicle\MyVehicle2.LMS-main\MyVehicle.LMS.INFRA\bin\Debug\netcoreapp3.1\MyVehicle.LMS.INFRA.deps.json
+C:\Users\Qusai.Aldughaim\Desktop\MyVehicle\MyVehicle2.LMS-main\MyVehicle.LMS.INFRA\bin\Debug\netcoreapp3.1\MyVehicle.LMS.INFRA.dll
+C:\Users\Qusai.Aldughaim\Desktop\MyVehicle\MyVehicle2.LMS-main\MyVehicle.LMS.INFRA\bin\Debug\netcoreapp3.1\MyVehicle.LMS.INFRA.pdb
+C:\Users\Qusai.Aldughaim\Desktop\MyVehicle\MyVehicle2.LMS-main\MyVehicle.LMS.INFRA\bin\Debug\netcoreapp3.1\MyVehicle.LMS.CORE.dll
+C:\Users\Qusai.Aldughaim\Desktop\MyVehicle\MyVehicle2.LMS-main\MyVehicle.LMS.INFRA\bin\Debug\netcoreapp3.1\MyVehicle.LMS.CORE.pdb
+C:\Users\Qusai.Aldughaim\Desktop\MyVehicle\MyVehicle2.LMS-main\MyVehicle.LMS.INFRA\obj\Debug\netcoreapp3.1\MyVehicle.LMS.INFRA.csproj.AssemblyReference.cache
+C:\Users\Qusai.Aldughaim\Desktop\MyVehicle\MyVehicle2.LMS-main\MyVehicle.LMS.INFRA\obj\Debug\netcoreapp3.1\MyVehicle.LMS.INFRA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Qusai.Aldughaim\Desktop\MyVehicle\MyVehicle2.LMS-main\MyVehicle.LMS.INFRA\obj\Debug\netcoreapp3.1\MyVehicle.LMS.INFRA.AssemblyInfoInputs.cache
+C:\Users\Qusai.Aldughaim\Desktop\MyVehicle\MyVehicle2.LMS-main\MyVehicle.LMS.INFRA\obj\Debug\netcoreapp3.1\MyVehicle.LMS.INFRA.AssemblyInfo.cs
+C:\Users\Qusai.Aldughaim\Desktop\MyVehicle\MyVehicle2.LMS-main\MyVehicle.LMS.INFRA\obj\Debug\netcoreapp3.1\MyVehicle.LMS.INFRA.csproj.CoreCompileInputs.cache
+C:\Users\Qusai.Aldughaim\Desktop\MyVehicle\MyVehicle2.LMS-main\MyVehicle.LMS.INFRA\obj\Debug\netcoreapp3.1\MyVehicle.LMS.INFRA.csproj.CopyComplete
+C:\Users\Qusai.Aldughaim\Desktop\MyVehicle\MyVehicle2.LMS-main\MyVehicle.LMS.INFRA\obj\Debug\netcoreapp3.1\MyVehicle.LMS.INFRA.dll
+C:\Users\Qusai.Aldughaim\Desktop\MyVehicle\MyVehicle2.LMS-main\MyVehicle.LMS.INFRA\obj\Debug\netcoreapp3.1\MyVehicle.LMS.INFRA.pdb

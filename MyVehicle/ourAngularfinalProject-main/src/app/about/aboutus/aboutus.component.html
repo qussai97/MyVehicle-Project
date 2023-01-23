@@ -1,0 +1,57 @@
+<app-navbar></app-navbar>
+
+
+
+
+
+<section class="banner banner-secondary" id="top" style="margin-top: -100px; background-image: url(assets/img/about-us.png);  height: 70%;">
+
+       <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="banner-caption">
+
+
+                </div>
+            </div>
+        </div>
+         </div>
+</section>
+
+<main>
+    <section class="our-services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="left-content">
+                        <br>
+                        <h4>About Us</h4>
+                        <div  *ngFor="let about of homeService.About">
+                          <p>{{about.description}}</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="col-md-5">
+                    <img src="assets\img\myvehicleplate.jpg" class="img-fluid" alt="">
+                </div>
+               
+            </div>
+        </div>
+    </section>
+    <div class=container>
+        <div class="row">
+        <div class="cards">
+            <app-aboutus-card *ngFor="let card of homeService.About" [typeLang]="card.aboutImage" [subText]="card.subText" [description]="card.description"></app-aboutus-card>
+        </div>
+  
+      <div class="col-md-12">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3393.8156769217826!2d35.79240745013478!3d31.720929694294394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2sjo!4v1635955062072!5m2!1sen!2sjo" width="1100"
+       height="450" style="border-radius: 10px;border: 3px solid #0c73a3; margin:20px;text-align: center;display:block; " allowfullscreen="" loading="lazy" >
+</iframe>
+</div></div>
+</div>
+
+</main>
+
+<app-footer></app-footer>

@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/css/styledashboard.css">
+    <link href="/assets/css/stylelibs.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/fontawesome-all.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/chartist.css">
+    <link rel="stylesheet" href="/assets/css/morris.css">
+    <link rel="stylesheet" href="/assets/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/assets/css/c3.css">
+    <link rel="stylesheet" href="/assets/css/flag-icon.min.css">
+    
+    <title> Admin Dashboard </title>
+</head>
+
+<body>
+
+    <!-- main wrapper -->
+    <!-- ============================================================== -->
+    <div class="dashboard-main-wrapper">
+        <!-- ============================================================== -->
+        <!-- navbar -->
+        <!-- ============================================================== -->
+        <div class="dashboard-header">
+            <nav class="navbar navbar-expand-lg bg-light fixed-top">
+                
+                <div class="logo">
+                    <img src="assets/img/MyVehicle -logos.jpeg" width="100" height="80" style="padding:7px;margin-left: 50px; border-radius: 15px;" alt="Venue Logo">
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-right-top">
+                        <li class="nav-item">
+                            <div id="custom-search" class="top-search-bar">
+                                <input class="form-control" type="text" placeholder="Search..">
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown notification">
+                            <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell" style="margin-left: 15px;margin-right: 15px;"></i> <span class="indicator"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
+                                <li>
+                                    <div class="notification-title"> Notification</div>
+                                    <div class="notification-list">
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action active">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">John Abraham </span>is now following you
+                                                        <div class="notification-date">2 days ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-4.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is watching your main repository
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-5.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica Caruso</span>accepted your invitation to join the team.
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list-footer"> <a href="#">View all notifications</a></div>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item dropdown nav-user" style="margin-bottom: 15px;margin-left: 15px;margin-right: 15px;">
+                            <a class="nav-link nav-user-img" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/img/admin.jpg" alt="" class="user-avatar-md rounded-circle" (click)="showProfile()"></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                                <div class="nav-user-info">
+                                    <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>
+                                    <span class="status"></span><span class="ml-2">Available</span>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end navbar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- left sidebar -->
+        <!-- ============================================================== -->
+        <div class="nav-left-sidebar sidebar-dark">
+            <div class="menu-list">
+                <nav class="navbar navbar-expand-lg navbar-light">
+
+
+
+                    
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                <a class="nav-link active" routerLink="/admin/admin"><i class="fa fa-dashboard"></i>my vehicle </a>
+
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link active" routerLink="/admin/admin"><i class="fa fa-fw fa-user-circle"></i>Dashboard </a>
+
+                                <li class="nav-item">
+
+                                    <a mat-button [matMenuTriggerFor]="menu" class="nav-link" style="float: left; padding-right:18rem;"><i class="icon fa fa-wrench fa-fw " aria-hidden="true"></i>preferences</a>
+                                    <mat-menu #menu="matMenu">
+                                        <button mat-menu-item (click)="createEmployee()"><i class="fa fa-user-plus" aria-hidden="true"></i>Create Employee</button>
+                                        <button mat-menu-item (click)="InsertTaskJob()"><i class="fa fa-thumb-tack" aria-hidden="true"></i>Add TaskJoB</button>
+                                        <button mat-menu-item (click)="InsertLicensing()"><i class="fa fa-th-list" aria-hidden="true"></i>Add Licensing</button>
+                                        <button mat-menu-item (click)="createInsurance()"><i class="fa fa-th-list" aria-hidden="true"></i>Add Insurance</button>
+                                        <button mat-menu-item (click)="GoTosearchvehiclecategory()"><i class="fa fa-search" aria-hidden="true"></i>searching vehiclecategory </button>
+                                        <button mat-menu-item (click)="GoTosearchlicenseexpiry()"><i class="fa fa-clock-o" aria-hidden="true"></i>searching licenseexpiry </button>
+
+                                    </mat-menu>
+                                    
+                                    <li class="nav-item ">
+                                        <a class="nav-link" routerLink="/admin/report"><i class="fa fa-file-pdf-o"></i>Reports</a>
+
+                                        <li class="nav-item ">
+                                            <a class="nav-link" routerLink="/admin/vehicle-system-report-between"><i class="fa fa-file-pdf-o"></i>searching Reports</a>
+                                            <li class="nav-item">
+                                                <a class="nav-link" routerLink="/admin/financial-report"><i class="fa fa-file-o" ></i>Financial Reports</a>
+
+                                                
+
+                                                <li class="nav-item">
+                                                    <a class="nav-link" routerLink="/admin/get-attendance"><i class="fa fa-pencil-square-o" aria-hidden="true" ></i>Get All Attendance </a>
+
+                                                    <li class="nav-item">
+
+                                                        <a class="nav-link"><i class="fa fa-sign-out" aria-hidden="true" (click)="logout()"></i>Logout</a>
+
+                                                    </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+
+        <!-- ============================================================== -->
+        <!-- end left sidebar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- wrapper  -->
+        <!-- ============================================================== -->
+        <div class="dashboard-wrapper">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="page-header">
+                                <h2 class="pageheader-title">Admin Dashboard </h2>
+                                <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
+                                <div class="page-breadcrumb">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <!-- <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                                            
+                                        <li class="breadcrumb-item active" aria-current="page">E-Commerce Dashboard Template</li>
+                                         -->
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ============================================================== -->
+                    <!-- end pageheader  -->
+                    <!-- ============================================================== -->
+
+
+                </div>
+            </div>
+            <form [formGroup]="formGroupCategory">
+                <input type="text" matInput formControlName="VehicleCategory" style="font-size:large;margin-left: 40px" placeholder="Vehicle Category">
+                <button (click)="GetData()" class="colorbtn">Search</button>
+            </form>
+
+            <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
+                <div class="card tableFixHead" id="pdfTable" #pdfTable>
+                    <h5 class="card-header">System Reports</h5>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="styled-table" id="excel-table">
+                                <thead class="bg-light">
+                                    <tr class="border-0">
+
+
+
+                                        <th class="border-0">vehicleName</th>
+                                        <th class="border-0">vehicleModel </th>
+                                        <th class="border-0">vehicleColor</th>
+                                        <th class="border-0">vehicleCategory</th>
+                                        <th class="border-0">useType</th>
+                                        <th class="border-0">registerType</th>
+                                        <th class="border-0">licenseNumber</th>
+
+                                        <th class="border-0">licenseExpiry</th>
+                                        <th class="border-0">engineCapacity</th>
+                                        <th class="border-0">engineType </th>
+                                        <th class="border-0">madeYear</th>
+                                        <th class="border-0">licensingCenter</th>
+                                        <th class="border-0">chassisNumber</th>
+                                        <th class="border-0">engineNumber</th>
+                                        <th class="border-0">address</th>
+                                        <th class="border-0">fullName</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let user of home.data">
+
+
+                                        <td>{{user.vehicleName}} </td>
+                                        <td>{{user.vehicleModel}} </td>
+                                        <td>{{user.vehicleColor}}</td>
+                                        <td>{{user.vehicleCategory}}</td>
+                                        <td>{{user.useType}}</td>
+                                        <td>{{user.registerType}} </td>
+                                        <td>{{user.licenseNumber}} </td>
+
+                                        <td>{{user.licenseExpiry}} </td>
+                                        <td>{{user.engineCapacity}} </td>
+                                        <td>{{user.engineType}}</td>
+                                        <td>{{user.madeYear}}</td>
+                                        <td>{{user.licensingCenter}}</td>
+                                        <td>{{user.chassisNumber}} </td>
+                                        <td>{{user.engineNumber}} </td>
+                                        <td>{{user.address}} </td>
+                                        <td>{{user.fullName}} </td>
+
+
+                                        <!-- and so on... -->
+                                </tbody>
+
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+                <button class="btn colorbtn" (click)="downloadAsPDF();">Export To PDF</button>
+                <button class="btn colorbtn" (click)="exportexcel();">Export To Excel</button>
+
+
+            </div>
+            <!-- footer -->
+            <!-- ============================================================== -->
+        </div>
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <p class="edit">Copyright © {{currentYear}} Template by: <a>{{Name}}</a></p>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="text-md-right footer-links d-none d-sm-block">
+                            <a (click)="GoToHome()">Home</a>
+                            <a (click)="GoToAbout()">About</a>
+                            <a (click)="GoToContact()">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+</body>
+
+</html>

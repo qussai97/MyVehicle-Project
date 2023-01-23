@@ -1,0 +1,105 @@
+<app-navbar>
+
+</app-navbar>
+
+<section class="banner banner-secondary" id="top" style="margin-top: 1px; background-image: url(assets/img/Contact-us.png);height:70%; ">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="banner-caption">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main>
+
+    <section class="popular-places">
+        <div class="container">
+            <div class="contact-content">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="left-content">
+                            <div class="row" [formGroup]="formGroup">
+                                <div class="col-md-4">
+                                    <fieldset>
+                                        <input name="name" type="text" class="form-control" id="name" formControlName="fullNameControl" placeholder="Your name..." required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-4">
+                                    <fieldset>
+                                        <input name="email" type="text" class="form-control" id="Email" formControlName="emailControl" placeholder="Email..." required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-4">
+                                    <fieldset>
+                                        <input name="phone" type="text" class="form-control" id="Phone" formControlName="phoneNumberControl" placeholder="Phone..." required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                    <fieldset>
+                                        <textarea name="comment" rows="6" class="form-control" id="comment" formControlName="commentControl" placeholder="Your comment..." required=""></textarea>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                    <fieldset>
+                                        <div class="blue-button">
+                                            <a (click)="sendTestimonial()" id="form-submit" class="btn">Send Message</a>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="right-content">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="content">
+                                        <p>Contact and visit us ,we will be happy to see you and hear from you</p>
+
+                                        <ul>
+                                            <li><span>Phone1:</span><a href="#">{{webPhone1}}</a></li>
+                                            <li><span>Phone2:</span><a href="#">{{webPhone2}}</a></li>
+                                            <li><span>Email:</span><a href="#">{{webemail}}</a></li>
+                                            <li><span>Address:</span><i class="fa fa-map-marker"></i> {{webAddress}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="section-heading">
+
+                <h2>Happy to talk to you</h2>
+                <br>
+                <h2>Our Team </h2>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <app-contact-card></app-contact-card> -->
+    <!-- <div class=container>
+               <div class="cards">
+                 <app-contact-card *ngFor="let item of carddata" [name]="item.name" [subText]="item.subText" [description]="item.description" style="margin-top:50px;"></app-contact-card>
+               </div>
+             </div> -->
+
+</main>
+
+
+
+
+
+<app-footer></app-footer>

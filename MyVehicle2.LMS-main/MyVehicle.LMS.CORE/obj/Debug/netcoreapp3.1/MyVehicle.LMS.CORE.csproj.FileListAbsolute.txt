@@ -1,0 +1,10 @@
+C:\Users\Qusai.Aldughaim\Desktop\MyVehicle\MyVehicle2.LMS-main\MyVehicle.LMS.CORE\bin\Debug\netcoreapp3.1\MyVehicle.LMS.CORE.deps.json
+C:\Users\Qusai.Aldughaim\Desktop\MyVehicle\MyVehicle2.LMS-main\MyVehicle.LMS.CORE\bin\Debug\netcoreapp3.1\MyVehicle.LMS.CORE.dll
+C:\Users\Qusai.Aldughaim\Desktop\MyVehicle\MyVehicle2.LMS-main\MyVehicle.LMS.CORE\bin\Debug\netcoreapp3.1\MyVehicle.LMS.CORE.pdb
+C:\Users\Qusai.Aldughaim\Desktop\MyVehicle\MyVehicle2.LMS-main\MyVehicle.LMS.CORE\obj\Debug\netcoreapp3.1\MyVehicle.LMS.CORE.csproj.AssemblyReference.cache
+C:\Users\Qusai.Aldughaim\Desktop\MyVehicle\MyVehicle2.LMS-main\MyVehicle.LMS.CORE\obj\Debug\netcoreapp3.1\MyVehicle.LMS.CORE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Qusai.Aldughaim\Desktop\MyVehicle\MyVehicle2.LMS-main\MyVehicle.LMS.CORE\obj\Debug\netcoreapp3.1\MyVehicle.LMS.CORE.AssemblyInfoInputs.cache
+C:\Users\Qusai.Aldughaim\Desktop\MyVehicle\MyVehicle2.LMS-main\MyVehicle.LMS.CORE\obj\Debug\netcoreapp3.1\MyVehicle.LMS.CORE.AssemblyInfo.cs
+C:\Users\Qusai.Aldughaim\Desktop\MyVehicle\MyVehicle2.LMS-main\MyVehicle.LMS.CORE\obj\Debug\netcoreapp3.1\MyVehicle.LMS.CORE.csproj.CoreCompileInputs.cache
+C:\Users\Qusai.Aldughaim\Desktop\MyVehicle\MyVehicle2.LMS-main\MyVehicle.LMS.CORE\obj\Debug\netcoreapp3.1\MyVehicle.LMS.CORE.dll
+C:\Users\Qusai.Aldughaim\Desktop\MyVehicle\MyVehicle2.LMS-main\MyVehicle.LMS.CORE\obj\Debug\netcoreapp3.1\MyVehicle.LMS.CORE.pdb

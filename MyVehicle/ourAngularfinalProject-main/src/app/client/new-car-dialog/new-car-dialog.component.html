@@ -1,0 +1,184 @@
+<h2 mat-dialog-title>
+    add car Licensing</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="formGroup">
+        <mat-form-field class="example-full-width">
+            <mat-label>vehicleName</mat-label>
+            <input type="text" matInput formControlName="vehicleName" style="font-size:large;">
+            <mat-error *ngIf="formGroup.controls.vehicleName.hasError('required')">
+                vehicleName is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>vehicleModel</mat-label>
+            <input type="text" matInput formControlName="vehicleModel" style="font-size:large;">
+            <mat-error *ngIf="formGroup.controls.vehicleModel.hasError('required')">
+                vehicleModel is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+
+
+        <mat-form-field class="example-full-width">
+            <mat-label>vehicleColor</mat-label>
+            <input type="text" matInput formControlName="vehicleColor" style="font-size:large;">
+            <mat-error *ngIf="formGroup.controls.vehicleColor.hasError('required')">
+                vehicleColor is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+        <div></div>
+        <mat-form-field class="example-full-width">
+            <mat-label>vehicleCategory</mat-label>
+            <input type="text" matInput formControlName="vehicleCategory" style="font-size: large;">
+            <mat-error *ngIf="formGroup.controls.vehicleCategory.hasError('required')">
+                vehicleCategory is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field class="example-full-width">
+            <mat-label>useType</mat-label>
+            <input matInput type="text" formControlName="useType" style="font-size: large;">
+
+
+
+
+
+
+
+
+            <mat-error *ngIf="formGroup.controls.useType.hasError('required')">
+
+                useType is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field class="example-full-width">
+            <mat-label>registerType</mat-label>
+            <input type="text" matInput formControlName="registerType" style="font-size: large;">
+            <mat-error *ngIf="formGroup.controls.registerType.hasError('required')">
+                registerType is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <div></div>
+        <mat-form-field class="example-full-width">
+            <mat-label>licenseNumber</mat-label>
+            <input type="text" matInput formControlName="licenseNumber" style="font-size: large;">
+
+            <mat-error *ngIf="formGroup.controls.licenseNumber.hasError('required')">
+                licenseNumber is <strong>required</strong>
+            </mat-error>
+
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>licenseExpiry</mat-label>
+            <input type="datetime-local" matInput formControlName="licenseExpiry" style="font-size: large;">
+            <mat-error *ngIf="formGroup.controls.licenseExpiry.hasError('required')">
+                licenseExpiry is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>engineCapacity</mat-label>
+            <input type="number" matInput formControlName="engineCapacity" style="font-size: large;">
+            <mat-error *ngIf="formGroup.controls.engineCapacity.hasError('required')">
+                engineCapacity is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+        <div></div>
+        <mat-form-field class="example-full-width">
+            <mat-label>engineType</mat-label>
+            <input type="text" matInput formControlName="engineType" style="font-size: large;">
+            <mat-error *ngIf="formGroup.controls.engineType.hasError('required')">
+                engineType is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field class="example-full-width">
+            <mat-label>madeYear</mat-label>
+            <input type="datetime-local" matInput formControlName="madeYear" style="font-size: large;">
+
+            <mat-error *ngIf="formGroup.controls.madeYear.hasError('required')">
+                madeYear is <strong>required</strong>
+            </mat-error>
+
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>licensingCenter</mat-label>
+            <input type="text" matInput formControlName="licensingCenter" style="font-size: large;">
+            <mat-error *ngIf="formGroup.controls.licensingCenter.hasError('required')">
+                licensingCenter is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+        <div></div>
+        <mat-form-field class="example-full-width">
+            <mat-label>chassisNumber</mat-label>
+            <input type="text" matInput formControlName="chassisNumber" style="font-size: large;">
+            <mat-error *ngIf="formGroup.controls.chassisNumber.hasError('required')">
+                chassisNumber is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>engineNumber</mat-label>
+            <input type="text" matInput formControlName="engineNumber" style="font-size: large;">
+            <mat-error *ngIf="formGroup.controls.engineNumber.hasError('required')">
+                engineNumber is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>address</mat-label>
+            <input type="text" matInput formControlName="address" style="font-size: large;">
+            <mat-error *ngIf="formGroup.controls.address.hasError('required')">
+                address is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+
+        <div></div>
+
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Licensing</mat-label>
+            <mat-select formControlName="licensingId">
+                <mat-option  *ngFor="let user of home.License" value="{{user.licensingId}}">
+
+                    {{user.minValue}}-{{user.maxValue}},{{user.engineType}}
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="formGroup.controls.licensingId.hasError('required')">
+                licensingId is <strong>required</strong>
+            </mat-error>
+
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Insurance</mat-label>
+            <mat-select  formControlName="insuranceId">
+                <mat-option  *ngFor="let user of home.Insurance" value="{{user.insuranceId}}">
+
+                    {{user.insuranceType}}
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="formGroup.controls.insuranceId.hasError('required')">
+                insuranceId is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+<br>
+        <mat-label for="file">vehicleImage</mat-label>
+        <br>
+        <input formControlName="file" id="file" accept="image/*" type="file" class="form-control" (change)="onFileChange($event)">
+        <div *ngIf="f.file.touched && f.file.invalid" class="alert alert-danger">
+          <div *ngIf="f.file.errors && f.file.errors.required">Image is required.</div>
+        </div>
+  
+        <img [src]="imageSrc" *ngIf="imageSrc" style="height: 150px; width:150px">
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button [disabled]="!formGroup.valid" mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="saveItem()">Save</button>
+</mat-dialog-actions>

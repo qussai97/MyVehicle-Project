@@ -1,0 +1,111 @@
+
+<app-navbar></app-navbar>
+
+<video autoplay muted loop style="width: 100%; margin-top:.12% ;">
+    <source src="..\assets\video\promo1.mp4" type="video/mp4">
+    
+
+  </video>
+
+<main>
+    <section class="our-services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="left-content">
+                        <br>
+                        <h4>About us</h4>
+                        <p> We are a team that developed the car licensing project
+                          Because it is an essential thing in our lives, the car is one of the most important necessities of life
+                          Teamwork is a powerful concept that you can put to work in nearly any industry
+                        </p>
+                        <div class="blue-button">
+                            <a routerLink="about">Discover More</a>
+                        </div>
+
+                        <br>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <img src="..\assets\img\myvehicleplate.jpg" class="img-fluid" alt="" style="border-radius: 8px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-places">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-6 col-xs-12">
+                    <div class="featured-item">
+                        <div class="thumb">
+                            <h1 style="text-align: center;"><b>Cost of License </b></h1>
+                          <hr>
+                            <div >
+                                 <table id="customers" >
+                                   <thead>
+                                          <tr>
+                                            <th>Engine Capacity CC (MIN)</th>
+                                            <th>Engine Capacity CC (MAX)</th>
+                                              <th>Engine Type</th>
+                                             <th>Fees in JD</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                        <tr *ngFor="let Licens of homeService.License">
+                                          <td>{{Licens.minValue}}</td>
+                                          <td>{{Licens.maxValue}}</td>
+                                            <td>{{ Licens.engineType }}</td>
+
+
+                                            <td>{{Licens.cost}} JD</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                <br>
+                                <hr style="color: blue;">
+                                <br>
+                                <h1 style="text-align: center;"><b>Cost of Insurance</b></h1>
+                                <hr>
+                                <div >
+                                     <table id="customers" >
+                                              <tr>
+                                                <th>Insurance  Type</th>
+                                                  <th>Fees in JD</th>
+                                                </tr>
+                                            <tr *ngFor="let Insurance of homeService.Insurance">
+                                              <td>{{Insurance.insuranceType}}</td>
+
+                                              <td>{{Insurance.insuranceValues}}</td>
+                                            </tr>
+
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                  </div>
+                           </div>
+                            </div>
+
+
+        </section>
+    <section id="video-container" style="background-image: url(assets/img/contact-image-1-1920x700.jpg);">
+        <div class="video-overlay"></div>
+        <div class="video-content">
+            <div class="inner">
+                  <div class="section-heading">
+                      <span>Contact Us</span>
+                      <h2>Contact with MyVehicle Team</h2>
+                  </div>
+
+
+                  <div class="blue-button">
+                    <a routerLink="contactus" >Contact Us</a>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+<app-footer></app-footer>

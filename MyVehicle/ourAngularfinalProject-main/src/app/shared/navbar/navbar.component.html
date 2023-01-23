@@ -1,0 +1,54 @@
+<div class="wrap">
+    <header id="header" style="border-bottom: 1px solid #ddd;;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <button id="primary-nav-button" type="button">Menu</button>
+                           <a (click)="GoToHome()">
+                           <div class="logo">
+                            <img src="assets/img/MyVehicle -logos.jpeg" width="70" height="112" style="padding:10px; border-radius: 40px;" alt="Venue Logo">
+                            </div>
+                             </a>
+
+                            <nav id="primary-nav" class="dropdown cf">
+                             <ul class="dropdown menu">
+
+
+
+                                 <div style="padding-right:800px;">
+                                <li class='active'><a (click)="GoToHome()">Home</a></li>
+
+
+
+                                <li>
+                                    <a (click)="GoToAbout()">About</a>
+
+
+
+                                </li>
+                            </div>
+
+                            <li><a class="nav-link" (click)="GoToContact()">Contact Us</a></li>
+
+
+                            <li style="float:right"><a class="nav-link" (click)="GoToLogin()"> Login</a></li>
+                            <li style="float:right"><a class="nav-link" (click)="GoToRegister()"> Register</a></li>
+
+
+
+                        </ul>
+
+                    </nav>
+
+
+
+                </div>
+
+
+          </div>
+      </div>
+
+    </header>
+
+</div>
